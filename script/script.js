@@ -1,5 +1,5 @@
 // Fetch movie data and populate the page
-fetch('http://localhost:3000/films')
+fetch('https://backend-code-challenge-p39f.vercel.app/films')
   .then(response => response.json())
   .then(movies => {
     const filmsList = document.getElementById('films');
