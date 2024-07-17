@@ -34,7 +34,7 @@ Upon loading FLATDANGO, users are presented with a list of available movies on t
 - Responsive Design: Ensures compatibility and usability across various devices.
 - Sold-Out Indication: Changes button text to "Sold Out" and disables it when tickets are no longer available.
 
-### Deployed link
+### Deployed link from vercel
 ```https://vercel.com/new/ian-mwangis-projects/success?developer-id=&external-id=&redirect-url=&branch=main&deploymentUrl=code-challenge-3-j7nrrsn0s-ian-mwangis-projects.vercel.app&projectName=code-challenge-3&s=https%3A%2F%2Fgithub.com%2Fianmwangi2%2Fcode-challenge-3&gitOrgLimit=&hasTrialAvailable=1&totalProjects=1&slug=app-future&slug=en-US&slug=new&slug=ian-mwangis-projects&slug=success ```
 
 ### AUTHORS
