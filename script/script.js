@@ -27,7 +27,7 @@ function showMovieDetails(movie) {
   const movieRuntime = document.getElementById('movie-runtime');
   const movieShowtime = document.getElementById('movie-showtime');
   const availableTickets = document.getElementById('available-tickets');
-  const buyTicketButton = document.getElementById('buy-ticket');
+  let buyTicketButton = document.getElementById('buy-ticket'); // Use let to reassign later
 
   // Update details with movie data
   moviePoster.src = movie.poster;
@@ -36,12 +36,26 @@ function showMovieDetails(movie) {
   movieShowtime.textContent = movie.showtime;
 
   // Calculate and display available tickets
-  const availableTicketsCount = movie.capacity - movie.tickets_sold;
+  let availableTicketsCount = movie.capacity - movie.tickets_sold;
   availableTickets.textContent = availableTicketsCount;
 
   // Update button state based on ticket availability
   buyTicketButton.disabled = availableTicketsCount === 0;
   buyTicketButton.textContent = availableTicketsCount === 0 ? 'Sold Out' : 'Buy Ticket';
+
+  // Add click event to the buy button
+  buyTicketButton.addEventListener('click', () => {
+    if (availableTicketsCount > 0) {
+      availableTicketsCount--;
+      availableTickets.textContent = availableTicketsCount;
+      movie.tickets_sold++;
+
+      if (availableTicketsCount === 0) {
+        buyTicketButton.disabled = true;
+        buyTicketButton.textContent = 'Sold Out';
+      }
+    }
+  });
 
   // Show movie details
   movieDetails.style.display = 'block';
