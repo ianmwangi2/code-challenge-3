@@ -43,7 +43,7 @@ function showMovieDetails(movie) {
   buyTicketButton.disabled = availableTicketsCount === 0;
   buyTicketButton.textContent = availableTicketsCount === 0 ? 'Sold Out' : 'Buy Ticket';
 
-  // Add click event to the buy button
+  // Add click event to the buy-button
   buyTicketButton.addEventListener('click', () => {
     if (availableTicketsCount > 0) {
       availableTicketsCount--;
